@@ -1,14 +1,9 @@
-@import url('http://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:400,600,700'); 
-@import url('font-awesome.css');  
-@import url('animate.css');
-
 body {
-	font-family:'Open Sans', Arial, sans-serif;
-	font-weight:300;
-	line-height:1.6em;
-	color:#656565;
-	font-size: 1.4em;
-	background: #eaf9ff;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: 300;
+    color: #656565;
+    font-size: 14px;
+    background: #eaf9ff;
 }
 
 a:active {
@@ -60,17 +55,6 @@ ul.withArrow{
 }
 ul.withArrow li{
 	
-}
-ul.withArrow li span{
-	margin-right: 10px;
-	font-weight: 700;
-	color: #29448e;
-	border: 1px solid;
-	padding: 4px 8px;
-	font-size: 11px;
-	border-radius: 50%;
-	height: 20px;
-	width: 20px;
 }
 .widget {
     color: #456c7b;
@@ -874,12 +858,8 @@ background: #32c8de;
 .top-wrapper {
 	margin-bottom:20px;
 }
-.info-blocks {margin-bottom: 15px;/* background: #efefef; */}
-.info-blocks i.icon-info-blocks {float: left;color: #ffffff;font-size: 30px;min-width: 50px;margin-top: 7px;text-align: center;background: #43b7e9;width: 72px;height: 72px;padding-top: 21px;}
-.info-blocks .info-blocks-in {
-padding: 0 10px;
-overflow: hidden;
-}
+.icon-info-blocks {float: left;color: #ffffff;font-size: 30px;min-width: 50px;margin-top: 7px;text-align: center;background: #43b7e9;width: 72px;height: 72px;padding-top: 21px;}
+
 .info-blocks .info-blocks-in h3 {color: #000;font-size: 16px;line-height: 28px;margin:0px;margin-bottom: 0px;font-weight: 600;}
 .info-blocks .info-blocks-in p {font-size: 14px;}
   
@@ -1167,7 +1147,8 @@ color: #222;
 	color:#fff;
 }
 .pricing-box-item.activeItem .pricing-heading h3 {
-	 color: #fff;
+	 
+color: #fff;
 }
 
 .pricing-box-item .pricing-heading h3 strong {

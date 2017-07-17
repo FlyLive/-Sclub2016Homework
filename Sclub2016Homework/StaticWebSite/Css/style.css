@@ -1,0 +1,51 @@
+﻿p{
+    margin:0;
+    font-size:14px;
+}
+.container {
+    width: 75%;
+    margin: 50px auto;
+}
+
+.row {
+    margin: 15px 0;
+}
+
+.info-blocks {
+    width: 33.333333333%;
+    float: left;
+    margin-bottom: 15px;
+}
+.info-blocks-in {
+    overflow: hidden;
+    padding: 0 10px;
+}
+.info-blocks i {
+    float: left;
+    color: #ffffff;
+    font-size: 30px;
+    min-width: 50px;
+    margin-top: 7px;
+    text-align: center;
+    background: #43b7e9;
+    width: 72px;
+    height: 52px;
+    padding-top: 21px;
+}
+
+.orginazation-blocks {
+    float: left;
+    width: 50%;
+}
+.withArrow li span {
+    margin-right: 10px;
+    font-weight: 700;
+    color: #29448e;
+    border: 1px solid;
+    padding: 4px 8px;
+    font-size: 11px;
+    border-radius: 50%;
+}
+.about-text {
+    padding: 0 15px;
+}
