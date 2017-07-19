@@ -5,14 +5,25 @@ using Xunit;
 
 namespace ChangeProblem
 {
-    class PhaseOne
+    public class PhaseOne
     {
-        //计算应找零钱
-        public decimal Balance(decimal payMoney, decimal price)
+        /// <summary>
+        /// 计算应找零钱
+        /// </summary>
+        /// <param name="pay"></param>
+        /// <param name="price"></param>
+        /// <returns></returns>
+        public decimal Balance(decimal pay, decimal price)
         {
-            return payMoney - price;
+            return pay - price;
         }
-        //计算最优应找零钱的张数
+
+        /// <summary>
+        /// 计算最优应找零钱的张数
+        /// </summary>
+        /// <param name="change"></param>
+        /// <param name="denomination"></param>
+        /// <returns></returns>
         public int[] OptimalNumOfChange(decimal change, decimal[] denomination)
         {
             int[] numOfChange = new int[denomination.Length];

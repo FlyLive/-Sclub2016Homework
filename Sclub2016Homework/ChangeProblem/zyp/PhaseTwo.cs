@@ -5,29 +5,48 @@ using Xunit;
 
 namespace ChangeProblem
 {
-    class PhaseTwo
+    public class PhaseTwo
     {
-        //计算应找零钱
-        public decimal Balance(decimal pay, decimal money)
+        /// <summary>
+        /// 计算应找零钱
+        /// </summary>
+        /// <param name="pay"></param>
+        /// <param name="price"></param>
+        /// <returns></returns>
+        public decimal Balance(decimal pay, decimal price)
         {
-            return pay - money;
+            return pay - price;
         }
-        //根据钱柜实际应找零钱的张数
-        public int[] ActualNumOfChange(decimal balance, decimal[] denomination,int[] numOfBox)
+
+        /// <summary>
+        /// 根据钱柜实际应找零钱的张数
+        /// </summary>
+        /// <param name="change"></param>
+        /// <param name="denomination"></param>
+        /// <param name="numOfBox"></param>
+        /// <returns></returns>
+        public int[] ActualNumOfChange(decimal change, decimal[] denomination,int[] numOfBox)
         {
             int[] numOfChange = new int[denomination.Length];
             for (int i = 0; i < denomination.Length; i++)
             {
                 if (numOfBox[i] != 0)
                 {
-                    numOfChange[i] = (int)(balance / denomination[i]);
-                    balance = (decimal)(balance % denomination[i]);
+                    numOfChange[i] = (int)(change / denomination[i]);
+                    change = (decimal)(change % denomination[i]);
                 }
             }
             return numOfChange;
         }
-        //找零钱后，钱柜的变化
-        public int[] AddMoney(int[] numOfChange, int[] numOfPay, int[] numOfBox)
+
+        /// <summary>
+        /// 找零钱后，钱柜的变化
+        /// </summary>
+        /// <param name="numOfChange"></param>
+        /// <param name="numOfPay"></param>
+        /// <param name="numOfBox"></param>
+        /// <returns></returns>
+        public int[] ChangeMoney(int[] numOfChange, int[] numOfPay, int[] numOfBox)
         {
             for (int i = 0; i < numOfChange.Length; i++)
             {
