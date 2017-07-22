@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
-namespace ChangeProblem
+namespace ChangeProblem.Test.zyp
 {
     public class PhaseOne
     {

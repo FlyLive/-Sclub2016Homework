@@ -1,7 +1,7 @@
 using System;
 using Xunit;
 
-namespace ChangeProblem
+namespace ChangeProblem.Test.zyp
 {
     public class TestOne
     {
@@ -13,7 +13,7 @@ namespace ChangeProblem
         [Theory]
         [InlineData(150.00, 122.80, 27.20)]
         [InlineData(300.00, 222.80, 77.20)]
-        public void CaculateChange(decimal pay, decimal price, decimal exceptChange)
+        public void BalanceTest(decimal pay, decimal price, decimal exceptChange)
         {
             decimal change = phaseOne.Balance(pay, price);
             Assert.Equal(exceptChange, change);
@@ -21,7 +21,7 @@ namespace ChangeProblem
 
         [Theory]
         [InlineData(27.20)]
-        public void FindNumOfChange(decimal change)
+        public void OptimalNumOfChangeTest(decimal change)
         {
             int[] actualNumOfPay = phaseOne.OptimalNumOfChange(change, denomination);//实际找零钱的张数
             int[] expectedPay = { 0, 0, 1, 0, 1, 2, 0, 2 };//期望的最优找零钱

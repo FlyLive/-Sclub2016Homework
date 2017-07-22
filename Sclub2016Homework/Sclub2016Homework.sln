@@ -4,9 +4,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PartOne", "PartOne", "{D12DDBD3-5311-4727-9234-7A4F6F33AE8D}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\..\..\Desktop\ChangeProblem\ChangeProblemTest.cs = ..\..\..\..\..\Desktop\ChangeProblem\ChangeProblemTest.cs
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PartTwo", "PartTwo", "{BFE7B605-ADDC-4572-9831-5101DCC0CEAB}"
 EndProject

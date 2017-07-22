@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
-namespace ChangeProblem
+namespace ChangeProblem.Test.zyp
 {
     public class PhaseTwo
     {
@@ -19,7 +19,7 @@ namespace ChangeProblem
         }
 
         /// <summary>
-        /// 根据钱柜实际应找零钱的张数
+        /// 根据无条件应找零钱的张数
         /// </summary>
         /// <param name="change"></param>
         /// <param name="denomination"></param>
@@ -41,6 +41,25 @@ namespace ChangeProblem
         }
 
         /// <summary>
+        /// 是否有找零方法
+        /// </summary>
+        /// <param name="changeOfNum"></param>
+        /// <param name="values"></param>
+        /// <param name="change"></param>
+        /// <returns></returns>
+        public bool HasChange(int[] changeOfNum,decimal[] values,decimal change)
+        {
+            decimal total = 0;
+
+            for(int i = 0;i < changeOfNum.Length; i++)
+            {
+                total += changeOfNum[i] * values[i];
+            }
+
+            return total == change;
+        }
+
+        /// <summary>
         /// 找零钱后，钱柜的变化
         /// </summary>
         /// <param name="numOfChange"></param>
@@ -49,21 +68,28 @@ namespace ChangeProblem
         /// <returns></returns>
         public int[] ChangeMoney(int[] numOfChange, int[] numOfPay, int[] numOfBox)
         {
-            int[] temp = new int[numOfBox.Length];
-            for (int i = 0; i < numOfChange.Length; i++)
-            {
-                temp[i] = numOfBox[i];
-            }
+            int[] tempBox = NumOfBoxClone(numOfBox);
 
             for (int i = 0; i < numOfChange.Length; i++)
             {
-                if (temp[i] < 0)
+                tempBox[i] += numOfPay[i] - numOfChange[i];
+                if (tempBox[i] < 0)
                 {
                     return numOfBox;//找不开
                 }
             }
-            numOfBox = temp;
+            numOfBox = tempBox;
             return numOfBox;
+        }
+
+        private int[] NumOfBoxClone(int[] numOfBox)
+        {
+            int[] newBox = new int[numOfBox.Length];
+            for (int i = 0; i < numOfBox.Length; i++)
+            {
+                newBox[i] = numOfBox[i];
+            }
+            return newBox;
         }
     }
 }
