@@ -8,7 +8,7 @@ namespace ChangeProblem.zyp
     public class TestTwo
     {
         private static decimal[] denomination = { 100, 50, 20, 10, 5, 1, 0.5M, 0.1M };//确定钱柜钱面值；
-        private static int[] numOfBox = { 0, 10, 0, 30, 20, 10, 10, 10 };//钱柜里钱的张数  
+        private static int[] numOfBox = { 0, 10, 0, 30, 20, 10, 10, 1 };//钱柜里钱的张数  
 
         private static PhaseTwo phaseTwo = new PhaseTwo();
 

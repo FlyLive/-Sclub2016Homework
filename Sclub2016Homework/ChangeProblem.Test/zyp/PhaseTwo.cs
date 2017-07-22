@@ -30,10 +30,11 @@ namespace ChangeProblem
             int[] numOfChange = new int[denomination.Length];
             for (int i = 0; i < denomination.Length; i++)
             {
-                if (numOfBox[i] != 0)
+                if (change >= denomination[i] & numOfBox[i] != 0)
                 {
-                    numOfChange[i] = (int)(change / denomination[i]);
-                    change = (decimal)(change % denomination[i]);
+                    numOfChange[i]++;
+                    change -= denomination[i];
+                    i--;
                 }
             }
             return numOfChange;
@@ -48,10 +49,20 @@ namespace ChangeProblem
         /// <returns></returns>
         public int[] ChangeMoney(int[] numOfChange, int[] numOfPay, int[] numOfBox)
         {
+            int[] temp = new int[numOfBox.Length];
             for (int i = 0; i < numOfChange.Length; i++)
             {
-                numOfBox[i] += numOfPay[i] - numOfChange[i];
+                temp[i] = numOfBox[i];
             }
+
+            for (int i = 0; i < numOfChange.Length; i++)
+            {
+                if (temp[i] < 0)
+                {
+                    return numOfBox;//找不开
+                }
+            }
+            numOfBox = temp;
             return numOfBox;
         }
     }
